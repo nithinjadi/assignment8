@@ -1,0 +1,144 @@
+/* src/styles/App.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/free-photo/3d-rendering-kid-playing-digital-game_23-2150898496.jpg?t=st=1730569699~exp=1730573299~hmac=0ce264e9d38ddae69444986f05f65066b7a635ce33393d945af445d9a6bd20f4&w=740') no-repeat center center scroll;
+    background-size: cover;
+
+    color: #333;
+}
+
+nav {
+    background-color: rgba(8, 7, 7, 0.8); /* Slightly transparent for a modern look */
+    color: white;
+    padding: 15px;
+    position: sticky; /* Sticky navigation */
+    top: 0;
+    z-index: 1000;
+    display: flex; /* Flexbox for spacing */
+    justify-content: space-around; /* Even spacing for nav items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #28a745; /* Change link color on hover */
+}
+
+h1 {
+    color: #ede9e9; /* Change headers to a lighter color */
+}
+
+h2 {
+    color: black;
+}
+
+.summary, form {
+    background: rgba(250, 249, 249, 0.9); /* Slightly transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(238, 235, 235, 0.2);
+    margin: 20px auto; /* Center and add margin */
+    max-width: 600px; /* Center summary */
+}
+
+form {
+    max-width: 500px; /* Center form */
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.8); /* Table background */
+    border-radius: 8px;
+    overflow: hidden; /* To round the corners */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+    
+    nav a {
+        margin: 5px 0; /* Adjust margin for stacked layout */
+    }
+    
+    form, .summary {
+        width: 90%; /* Reduce width on smaller screens */
+        margin: 10px auto; /* Center with smaller margins */
+    }
+    
+    table {
+        font-size: 0.9em; /* Smaller font for tables on mobile */
+        overflow-x: auto; /* Enable horizontal scroll for tables */
+        display: block; /* Block display for overflow handling */
+    }
+
+    th, td {
+        padding: 8px; /* Smaller padding for table cells */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3em; /* Further reduce font size for extra small screens */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width on small screens */
+        margin-top: 10px; /* Add margin for spacing */
+    }
+}
